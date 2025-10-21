@@ -11,6 +11,28 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 	</head>
+
+	<div id="output" style="margin:1rem 0;"></div>div>
+
+	<script>
+		const form = document.getElementById('chat-bot-prompt');
+		const input = document.getElementById('html');
+		const output = document.getElementById('output');
+
+		form.addEventListener('submit', (e) => {
+			e.preventDefault();
+			const text = input.value.trim();
+			if (!text) return;
+
+			const p = document.createElement('p');
+			p.textContent = text;
+			output.prepend(p);
+
+			input.value = '';
+			input.focus();
+		});
+	</script>
+	
 	<body class="is-preload">
 
 		<!-- Header -->
@@ -21,7 +43,7 @@
 
 		<!-- Chat Bot Prompt -->
 			<form id="chat-bot-prompt" method="post" action="#">
-				<input type="text" name="email" id="html" placeholder="Type Something" />
+				<input type="text" name="prompt" id="html" placeholder="Type Something" />
 				<input type="submit" value="Send" />
 			</form>
 
