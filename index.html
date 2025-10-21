@@ -37,14 +37,15 @@
 					e.preventDefault();
 					const text = input.value.trim();
 					if (!text) return;
+
+					output.textContent = '';
 		
 					const p = document.createElement('p');
 					p.textContent = text;
-					output.prepend(p);
-		
-					input.value = '';
-					input.focus();
+					output.appendChild(p);
+
 					form.reset();
+					input.focus();
 				});
 			</script>
 
