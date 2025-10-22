@@ -20,8 +20,15 @@
 				<p>Prompt Below</p>
 			</header>
 
+		<!-- Demographic Information -->
+			<form id="demographic-info" method="post" action="#">
+				<input type="text" name="age" id="age"/>
+				<input type="text" name="gender" id="gender"/>
+				<input type="text" name="level-of-education" id="level-of-education"/>
+			</form>
+
 		<!-- Chat Bot Prompt -->
-			<form id="chat-bot-prompt" method="post" action="#">
+			<!--<form id="chat-bot-prompt" method="post" action="#">
 				<input type="text" name="prompt" id="html" placeholder="Type Something" />
 				<input type="submit" value="Send" />
 			</form>
@@ -29,7 +36,7 @@
 			<div id="output" style="margin:1rem 0;"></div>
 
 			<!-- currently gets user prompt and shows it back to them, no chatbot API connected yet -->
-			<script>
+			<!--<script>
 				const form = document.getElementById('chat-bot-prompt');
 				const input = document.getElementById('html');
 				const output = document.getElementById('output');
