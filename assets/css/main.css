@@ -289,15 +289,21 @@ h1 {
 
 h2 {
   font-size: 1.75em;
-  line-height: 1.5em; }
+  line-height: 1.5em; 
+  #header section h2 ~ p { font-size: 0.95rem; }
+}
 
 h3 {
   font-size: 1.35em;
-  line-height: 1.5em; }
+  line-height: 1.5em; 
+  #header section h3 ~ p { font-size: 0.85rem; }
+}
 
 h4 {
   font-size: 1.1em;
-  line-height: 1.5em; }
+  line-height: 1.5em; 
+  #header section h4 ~ p { font-size: 0.75rem; }
+}
 
 h5 {
   font-size: 0.9em;
