@@ -802,9 +802,9 @@ button,
   font-size: 3.25em;
   margin: 0 0 0.55em 0; }
 
-#header p {
+/* #header p {
   font-size: 1.35em;
-  line-height: 1.65em; }
+  line-height: 1.65em; } */
 
 #header a {
   color: inherit; }
