@@ -378,7 +378,7 @@ header h3 + p {
 header h4 + p,
 header h5 + p,
 header h6 + p {
-  font-size: 0.85em;
+  font-size: 0.90em;
   margin-top: -0.6em;
   line-height: 1.5em; }
 
