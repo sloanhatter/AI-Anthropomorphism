@@ -17,59 +17,27 @@
 		<!-- Header -->
 			<header id="header">
 				<h1>AI Anthropomorphism</h1>
-				<p>Demographic Information</p>
+				<p>Welcome to the study!</p>
 			</header>
 
-		<!-- Demographic Information -->
-			<form id="demographic-info" method="post" action="#">
-				<label for="age">Age:</label>
-				<input type="number" name="age" id="age"><br>
+			<style>
+				.button-class {
+					background-color: #4CAF50";
+					border: none;
+					color: white;
+					padding: 10px 20px;
+					text-align: center;
+					text-decoration: none;
+					display: inline-block;
+					font-size: 16px;
+					margin: 4px 2px;
+					cursor: pointer;
+					border-radius: 4px
+				}
+			</style>
 
-				
-				<label for="gender">Gender:</label>
-				
-				<input type="radio" id="female" name="gender" value="Female">
-				<label for="female">Female</label><br>
+			<a href="demographic.html" class="button-class">Start!</a>
 
-				<input type="radio" id="male" name="gender" value="Male">
-				<label for="male">Male</label><br>
-
-				<input type="radio" id="other" name="gender" value="Other">
-				<label for="other">Other</label>
-
-
-				<input type="text" name="level-of-education" id="level-of-education"/>
-			</form>
-
-		<!-- Chat Bot Prompt -->
-			<!--<form id="chat-bot-prompt" method="post" action="#">
-				<input type="text" name="prompt" id="html" placeholder="Type Something" />
-				<input type="submit" value="Send" />
-			</form>
-
-			<div id="output" style="margin:1rem 0;"></div>
-
-			<!-- currently gets user prompt and shows it back to them, no chatbot API connected yet -->
-			<!--<script>
-				const form = document.getElementById('chat-bot-prompt');
-				const input = document.getElementById('html');
-				const output = document.getElementById('output');
-		
-				form.addEventListener('submit', (e) => {
-					e.preventDefault();
-					const text = input.value.trim();
-					if (!text) return;
-
-					output.textContent = '';
-		
-					const p = document.createElement('p');
-					p.textContent = text;
-					output.appendChild(p);
-
-					form.reset();
-					input.focus();
-				});
-			</script>
 
 		<!-- Footer -->
 			<footer id="footer">
