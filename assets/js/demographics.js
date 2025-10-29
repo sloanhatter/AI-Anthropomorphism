@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (!form) return;
 
   // Paste your Apps Script URL (ends with /exec) after step 3
-  const ENDPOINT = "https://script.google.com/macros/s/PASTE_YOUR_EXEC_URL/exec";
+  const ENDPOINT = "https://script.google.com/macros/s/AKfycbwxd90PNlso-4UyWg3rAnn0uDiL9M260Y94nNTRiPDlHYsUq5L3mKdeI1P9DLYmszN85w/exec";
 
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
