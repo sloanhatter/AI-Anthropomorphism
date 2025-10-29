@@ -7,102 +7,79 @@
 		<!-- <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />-->
 		<link rel="stylesheet" href="assets/css/main.css" />
 	</head>
-
-	<!-- <style>
-		input[type="radio"] {
-			appearance: autp;
-			-webkit-appearance: radio;
-			-moz-appearance: radio;
-			margin-right: 6px;
-			transform: scale(1.2);
-		}
-	</style> -->
-	<!-- <style>
-  /* Stack the radio options vertically */
-  .radio-option {
-    display: flex;
-    align-items: center;
-    margin: 6px 0;
-  }
-
-  /* Put the button before the label */
-  .radio-option input[type="radio"] {
-    margin-right: 10px;
-  }
-
-  /* Optional: ensure consistent label spacing */
-  .radio-option label {
-    margin: 0;
-  }
-</style> -->
 	
 	<body>
 
 		<!-- Header -->
-			<header id="header">
-				<h1>Demographic Information</h1>
-				<p>Please provide the following demographic information.</p>
-			</header>
+		<header id="header">
+			<h1>Demographic Information</h1>
+			<p>Please provide the following demographic information.</p>
+		</header>
 
 		<!-- Demographic Information -->
-			<form id="demographic-info">
+		<form id="demographic-info">
 
-        <!-- Age -->
-        <div class="form-control">
-          <label for="age" id="label-age">Age</label>
-          <input type="number" id="age" min="0" max="120">
-        </div>
+	        <!-- Age -->
+	        <div class="form-control">
+	          <label for="age" id="label-age">Age</label>
+	          <input type="number" id="age" min="0" max="120">
+	        </div>
+	
+	        <!-- Gender -->
+	        <div class="form-control">
+	          <br>
+			  <label for="gender" id="label-gender">Gender</label>
+	
+			  <div class="radio-option">
+	          	<input type="radio" id="Female" name="gender" value="Female">
+			  	<label for="Female">Female</label>
+			  </div>
+	
+			  <div class="radio-option">	
+	          	<input type="radio" id="Male" name="gender" value="Male">
+			  	<label for="Male">Male</label>
+			  </div>
+	
+			  <div class="radio-option">
+	          	<input type="radio" id="Other" name="gender" value="Other">
+	          	<label for="Other">Other</label>
+			  </div>
+	        </div>
+	
+	        <!-- Schooling Levels -->
+	        <div class="form-control">
+	          <label for="schooling-level" id="label-schooling-level">What level of schooling have you completed or are currently completing?</label>
+	          <select name="schooling-level" id="schooling-level">
+	            <option value="elementary">Elementary School</option>
+	            <option value="middle">Middle School</option>
+	            <option value="high-ged">High School/GED</option>
+	            <option value="associate">Associate's Degree</option>
+	            <option value="bachelor">Bachelor's Degree</option>
+	            <option value="master">Master's Degree</option>
+	            <option value="phd">Doctoral Degree</option>
+	          </select>
+	        </div>
+	
+			<!-- AI Use -->
+			<div class="form-control">
+				<br><label for="ai-use" id="label-ai-use">How often to you use Artificial Intelligence tools in your day to day life?</label>
+				<select name="ai-use" id="ai-use">
+					<option value="never">Never</option>
+					<option value="rarely">Rarely</option>
+					<option value="infrequent">Infrequently</option>
+					<option value="monthly">Monthly</option>
+					<option value="daily/weekly">Daily/Weekly</option>
+					<option value="contantly">Constantly</option>
+				</select>
+			</div>
 
-        <!-- Gender -->
-        <div class="form-control">
-          <br>
-		  <label for="gender" id="label-gender">Gender</label>
-
-		  <div class="radio-option">
-          	<input type="radio" id="Female" name="gender" value="Female">
-		  	<label for="Female">Female</label>
-		  </div>
-
-		  <div class="radio-option">	
-          	<input type="radio" id="Male" name="gender" value="Male">
-		  	<label for="Male">Male</label>
-		  </div>
-
-		  <div class="radio-option">
-          	<input type="radio" id="Other" name="gender" value="Other">
-          	<label for="Other">Other</label>
-		  </div>
-        </div>
-
-        <!-- Schooling Levels -->
-        <div class="form-control">
-          <label for="schooling-level" id="label-schooling-level">What level of schooling have you completed or are currently completing?</label>
-          <select name="schooling-level" id="schooling-level">
-            <option value="elementary">Elementary School</option>
-            <option value="middle">Middle School</option>
-            <option value="high-ged">High School/GED</option>
-            <option value="associate">Associate's Degree</option>
-            <option value="bachelor">Bachelor's Degree</option>
-            <option value="master">Master's Degree</option>
-            <option value="phd">Doctoral Degree</option>
-          </select>
-        </div>
-
-		<!-- AI Use -->
-		<div class="form-control">
-			<br><label for="ai-use" id="label-ai-use">How often to you use Artificial Intelligence tools in your day to day life?</label>
-			<select name="ai-use" id="ai-use">
-				<option value="never">Never</option>
-				<option value="rarely">Rarely</option>
-				<option value="infrequent">Infrequently</option>
-				<option value="monthly">Monthly</option>
-				<option value="daily/weekly">Daily/Weekly</option>
-				<option value="contantly">Constantly</option>
-			</select>
-		</div>
+			<button type="submit" value="submit">Submit</button>
+		</form>
 
 		<!-- Scripts -->
 			<script src="assets/js/main.js"></script>
+
+			
 
 	</body>
 </html>
