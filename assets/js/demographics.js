@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const payload = {
       age: document.getElementById('age')?.value || "",
       gender: (document.querySelector('input[name="gender"]:checked') || {}).value || "",
-      // NOTE: IDs here match your HTML exactly:
+      // IDs here match your HTML exactly:
       schooling_level: document.getElementById('schooling-level')?.value || "",
       ai_use: document.getElementById('ai-use')?.value || "",
       user_agent: navigator.userAgent,
@@ -34,7 +34,8 @@ document.addEventListener('DOMContentLoaded', () => {
       await fetch(ENDPOINT, {
         method: "POST",
         headers: {
-          "Content-Type": "application/json"
+          // IMPORTANT: text/plain to avoid CORS preflight
+          "Content-Type": "text/plain;charset=utf-8"
         },
         body: JSON.stringify(payload)
       });
@@ -47,4 +48,5 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 });
+
 
