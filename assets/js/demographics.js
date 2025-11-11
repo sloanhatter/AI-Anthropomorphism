@@ -20,10 +20,11 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     const payload = {
-      age: document.getElementById('age').value || "",
+      age: document.getElementById('age')?.value || "",
       gender: (document.querySelector('input[name="gender"]:checked') || {}).value || "",
-      schooling_level: document.getElementById('schooling_level')?.value || "",
-      ai_use: document.getElementById('ai_use')?.value || "",
+      // NOTE: IDs here match your HTML exactly:
+      schooling_level: document.getElementById('schooling-level')?.value || "",
+      ai_use: document.getElementById('ai-use')?.value || "",
       user_agent: navigator.userAgent,
       referrer: document.referrer,
       participant_id: participantId
@@ -38,12 +39,12 @@ document.addEventListener('DOMContentLoaded', () => {
         body: JSON.stringify(payload)
       });
 
-      // ⬇️ Redirect to Rules page after successful submit
+      // Redirect to Rules page after successful submit
       window.location.href = "rules.html";
-      // if you ever move things around, you can also use "./rules.html"
     } catch (err) {
       console.error("Error submitting demographics:", err);
       alert("There was an error submitting the form. Please try again.");
     }
   });
 });
+
