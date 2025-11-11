@@ -30,15 +30,16 @@ window.randomPage = async function () {
     await fetch(ENDPOINT, {
       method: "POST",
       headers: {
-        "Content-Type": "text/plain"
+        "Content-Type": "text/plain;charset=utf-8"
       },
       body: JSON.stringify(payload)
     });
   } catch (err) {
     console.warn("Assignment POST failed or CORS-blocked:", err);
-    // Even if we can't read the response, the request usually still reaches Apps Script.
+    // even if we can't see the response, the request usually still reaches Apps Script
   }
 
-  // Finally send the participant to their assigned test page
+  // Navigate to the chosen test page either way
   window.location.href = encodeURI(chosen);
 };
+
