@@ -11,7 +11,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let participantId = localStorage.getItem('participant_id');
     if (!participantId) {
-      participantId = "p_" + Date.now() + "_" + Math.random().toString(36).slice(2, 10);
+      const min = 10000;
+      const max = 99999;
+      participantId = String(Math.floor(Math.random() * (max - min + 1)) + min);
       localStorage.setItem('participant_id', participantId);
     }
 
